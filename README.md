@@ -35,3 +35,25 @@ module.exports = {
 @tailwind components;
 @tailwind utilities;
 ```
+
+## Installing necessary packages
+```
+npm i env-cmd
+npm i react-router-dom
+```
+
+## Creating .env files (add to .gitignore)
+
+```
+REACT_APP_API_KEY="Staging URL"
+```
+
+## Adding scripts to package.json file
+
+```
+"scripts": {
+    "development": "env-cmd -f .env.development react-scripts start",
+    "staging": "env-cmd -f .env.staging react-scripts build",
+    "production": "env-cmd -f .env.production react-scripts build"
+  },
+```
